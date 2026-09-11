@@ -102,22 +102,22 @@ do
         case "7":
             Console.WriteLine("=====Passed Students=====");
             GetCountPassed();
-            Console.WriteLine("======================+++");
+            Console.WriteLine("=========================");
             break;
 
         case "8":
+            Console.WriteLine("=====Find Score =====");
+            FindSpecificScore();
+            Console.WriteLine("=====================");
             break;
 
         case "9":
+            Console.WriteLine("=====Sort Score =====");
+            SortScores();
+            Console.WriteLine("=====================");
             break;
 
         case "10":
-            if (choice == "10")
-            {
-                Console.WriteLine("\nThank you for using the Student Score Analyzer!");
-                keepRunning = false;
-                break;
-            }
             break;
 
         default:
@@ -131,7 +131,7 @@ do
     {
         foreach (int s in scores)
         {
-            Console.WriteLine(string.Join(",", s));
+            Console.WriteLine(s);
         }
     }
 
@@ -182,6 +182,35 @@ do
 
         Console.WriteLine(passed);
     }
+
+    void FindSpecificScore()
+    {
+        Console.WriteLine("Enter score to find: ");
+        int find = int.Parse(Console.ReadLine());
+
+        var isFound = scores.Any(n => n == find);
+
+        if (isFound)
+        {
+            Console.WriteLine("Score found.");
+        }
+        else
+        {
+            Console.WriteLine("Score not found.");
+        }
+
+    }
+
+    void SortScores()
+        {
+            var sortScore = scores.OrderBy(n => n);
+
+            foreach (var s in sortScore)
+        {
+            Console.WriteLine(s);
+        }
+            
+        }
 
 } while (!keepRunning);
 
