@@ -46,7 +46,7 @@ do
 
     string choice = Console.ReadLine();
 
-    if (choice == "5")
+    if (choice == "10")
     {
         Console.WriteLine("\nThank you for using the Student Score Analyzer!");
         keepRunning = false;
@@ -112,7 +112,7 @@ do
             break;
 
         case "10":
-            if (choice == "5")
+            if (choice == "10")
             {
                 Console.WriteLine("\nThank you for using the Student Score Analyzer!");
                 keepRunning = false;
@@ -147,7 +147,7 @@ do
 
     void GetFailedScores()
     {
-        var failedScores = scores.Where(s => s <= 75);
+        var failedScores = scores.Where(s => s < 75);
 
         foreach (var f in failedScores)
         {
@@ -157,21 +157,21 @@ do
 
     void GetHighestScore()
     {
-        var highestScore = scores.Max(s => s);
+        var highestScore = scores.Max();
 
         Console.WriteLine(highestScore);
     }
 
     void GetLowestScore()
     {
-        var lowestScore = scores.Min(s => s);
+        var lowestScore = scores.Min();
 
         Console.WriteLine(lowestScore);
     }
 
     void GetAverage()
     {
-        var getAverage = scores.Average(n => n);
+        var getAverage = scores.Average();
 
         Console.WriteLine(getAverage);
     }
