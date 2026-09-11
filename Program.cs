@@ -11,21 +11,17 @@
 
 
 
-class Program
-{
-    static void Main(string[] args)
-    {
-            
-    List<int> scores = new List<int>
+
+List<int> scores = new List<int>
     {
         95, 72, 88, 60, 45, 91, 78, 83, 55, 100
     };
 
-    bool keepRunning = true;
+bool keepRunning = true;
 
-        do
-        {
-            
+do
+{
+
 
     Menu();
 
@@ -48,153 +44,146 @@ class Program
     }
 
 
-        string choice = Console.ReadLine();
-    
-        if (choice == "5")
+    string choice = Console.ReadLine();
+
+    if (choice == "5")
+    {
+        Console.WriteLine("\nThank you for using the Student Score Analyzer!");
+        keepRunning = false;
+        break;
+    }
+    if (choice != "1" && choice != "2" && choice != "3" && choice != "4" && choice != "5" && choice != "6" && choice != "7" && choice != "8" && choice != "9" && choice != "10")
+    {
+        Console.WriteLine("\nInvalid option. Press any key to try again...");
+        Console.ReadKey();
+        continue;
+    }
+
+    Console.WriteLine("\n----------------------------");
+
+    switch (choice)
+    {
+        case "1":
+            Console.WriteLine("=====All scores=====");
+            GetAllScores();
+            Console.WriteLine("====================");
+            break;
+
+        case "2":
+            Console.WriteLine("=====Passing scores=====");
+            GetPassingScores();
+            Console.WriteLine("========================");
+            break;
+
+        case "3":
+            Console.WriteLine("=====Failed scores=====");
+            GetFailedScores();
+            Console.WriteLine("========================");
+            break;
+
+        case "4":
+            Console.WriteLine("=====Highest score=====");
+            GetHighestScore();
+            Console.WriteLine("========================");
+            break;
+
+        case "5":
+            Console.WriteLine("=====Lowest score=====");
+            GetLowestScore();
+            Console.WriteLine("========================");
+            break;
+
+        case "6":
+            Console.WriteLine("=====Show Average=====");
+            GetAverage();
+            Console.WriteLine("======================");
+            break;
+
+        case "7":
+            Console.WriteLine("=====Passed Students=====");
+            GetCountPassed();
+            Console.WriteLine("======================+++");
+            break;
+
+        case "8":
+            break;
+
+        case "9":
+            break;
+
+        case "10":
+            if (choice == "5")
             {
                 Console.WriteLine("\nThank you for using the Student Score Analyzer!");
                 keepRunning = false;
                 break;
             }
-        if (choice != "1" && choice != "2" && choice != "3" && choice != "4" && choice != "5" && choice != "6" && choice != "7" && choice != "8" && choice != "9" && choice != "10")
-            {
-                Console.WriteLine("\nInvalid option. Press any key to try again...");
-                Console.ReadKey();
-                continue; 
-            }
+            break;
 
-Console.WriteLine("\n----------------------------");
-
-    switch (choice)
-        {
-            case "1":
-                Console.WriteLine("=====All scores=====");
-                GetAllScores();
-                Console.WriteLine("====================");
-                break;
-
-                case "2":
-                Console.WriteLine("=====Passing scores=====");
-                GetPassingScores();
-                Console.WriteLine("========================");
-                break;
-
-                case "3":
-                Console.WriteLine("=====Failed scores=====");
-                GetFailedScores();
-                Console.WriteLine("========================");
-                break;
-
-                case "4":
-                Console.WriteLine("=====Highest score=====");
-                GetHighestScore();
-                Console.WriteLine("========================");
-                break;
-
-                case "5":
-                Console.WriteLine("=====Lowest score=====");
-                GetLowestScore();
-                Console.WriteLine("========================");
-                break;
-
-                case "6":
-                Console.WriteLine("=====Show Average=====");
-                GetAverage();
-                Console.WriteLine("======================");
-                break;
-
-                case "7":
-                Console.WriteLine("=====Passed Students=====");
-                GetCountPassed();
-                Console.WriteLine("======================+++");
-                break;
-
-                case "8":
-                break;
-
-                case "9":
-                break;
-
-                case "10":
-                if (choice == "5")
-                    {
-                        Console.WriteLine("\nThank you for using the Student Score Analyzer!");
-                        keepRunning = false;
-                        break;
-                    }
-                break;
-
-            default:
-                Console.WriteLine("Invalid choice");
-                break;
-        }
+        default:
+            Console.WriteLine("Invalid choice");
+            break;
+    }
 
 
 
     void GetAllScores()
+    {
+        foreach (int s in scores)
         {
-          foreach(int s in scores)
-            {
-                Console.WriteLine(string.Join(",", s));
-            }
+            Console.WriteLine(string.Join(",", s));
         }
-
-    void GetPassingScores()
-        {
-            var passingScores = scores.Where(s => s >= 75 );
-
-            foreach(var p in passingScores)
-            {
-                Console.WriteLine(p);
-            }
-        }
-
-    void GetFailedScores()
-        {
-            var failedScores = scores.Where(s => s <= 75);
-
-            foreach(var f in failedScores)
-            {
-                Console.WriteLine(f);
-            }
-        }
-
-    void GetHighestScore()
-        {
-            var highestScore = scores.Max(s => s);
-
-            Console.WriteLine(highestScore);
-        }
-
-    void GetLowestScore()
-        {
-            var lowestScore = scores.Min(s => s);
-
-            Console.WriteLine(lowestScore);
-        }
-
-    void GetAverage()
-        {
-            var getAverage = scores.Average(n => n);
-            
-            Console.WriteLine(getAverage);
-        }
-
-    void GetCountPassed()
-        {
-            var passed = scores.Count(s => s >= 75);
-
-            Console.WriteLine(passed);
-        }
-
-    } while (!keepRunning);
-
-
     }
 
-    
+    void GetPassingScores()
+    {
+        var passingScores = scores.Where(s => s >= 75);
 
-}
+        foreach (var p in passingScores)
+        {
+            Console.WriteLine(p);
+        }
+    }
+
+    void GetFailedScores()
+    {
+        var failedScores = scores.Where(s => s <= 75);
+
+        foreach (var f in failedScores)
+        {
+            Console.WriteLine(f);
+        }
+    }
+
+    void GetHighestScore()
+    {
+        var highestScore = scores.Max(s => s);
+
+        Console.WriteLine(highestScore);
+    }
+
+    void GetLowestScore()
+    {
+        var lowestScore = scores.Min(s => s);
+
+        Console.WriteLine(lowestScore);
+    }
+
+    void GetAverage()
+    {
+        var getAverage = scores.Average(n => n);
+
+        Console.WriteLine(getAverage);
+    }
+
+    void GetCountPassed()
+    {
+        var passed = scores.Count(s => s >= 75);
+
+        Console.WriteLine(passed);
+    }
+
+} while (!keepRunning);
 
 
 
