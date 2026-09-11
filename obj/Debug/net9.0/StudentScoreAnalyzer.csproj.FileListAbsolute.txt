@@ -1,0 +1,15 @@
+C:\Users\ITD-L0183\Documents\GitHub\CSharp-StudentScoreAnalyzer\bin\Debug\net9.0\StudentScoreAnalyzer.exe
+C:\Users\ITD-L0183\Documents\GitHub\CSharp-StudentScoreAnalyzer\bin\Debug\net9.0\StudentScoreAnalyzer.deps.json
+C:\Users\ITD-L0183\Documents\GitHub\CSharp-StudentScoreAnalyzer\bin\Debug\net9.0\StudentScoreAnalyzer.runtimeconfig.json
+C:\Users\ITD-L0183\Documents\GitHub\CSharp-StudentScoreAnalyzer\bin\Debug\net9.0\StudentScoreAnalyzer.dll
+C:\Users\ITD-L0183\Documents\GitHub\CSharp-StudentScoreAnalyzer\bin\Debug\net9.0\StudentScoreAnalyzer.pdb
+C:\Users\ITD-L0183\Documents\GitHub\CSharp-StudentScoreAnalyzer\obj\Debug\net9.0\StudentScoreAnalyzer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ITD-L0183\Documents\GitHub\CSharp-StudentScoreAnalyzer\obj\Debug\net9.0\StudentScoreAnalyzer.AssemblyInfoInputs.cache
+C:\Users\ITD-L0183\Documents\GitHub\CSharp-StudentScoreAnalyzer\obj\Debug\net9.0\StudentScoreAnalyzer.AssemblyInfo.cs
+C:\Users\ITD-L0183\Documents\GitHub\CSharp-StudentScoreAnalyzer\obj\Debug\net9.0\StudentScoreAnalyzer.csproj.CoreCompileInputs.cache
+C:\Users\ITD-L0183\Documents\GitHub\CSharp-StudentScoreAnalyzer\obj\Debug\net9.0\StudentScoreAnalyzer.sourcelink.json
+C:\Users\ITD-L0183\Documents\GitHub\CSharp-StudentScoreAnalyzer\obj\Debug\net9.0\StudentScoreAnalyzer.dll
+C:\Users\ITD-L0183\Documents\GitHub\CSharp-StudentScoreAnalyzer\obj\Debug\net9.0\refint\StudentScoreAnalyzer.dll
+C:\Users\ITD-L0183\Documents\GitHub\CSharp-StudentScoreAnalyzer\obj\Debug\net9.0\StudentScoreAnalyzer.pdb
+C:\Users\ITD-L0183\Documents\GitHub\CSharp-StudentScoreAnalyzer\obj\Debug\net9.0\StudentScoreAnalyzer.genruntimeconfig.cache
+C:\Users\ITD-L0183\Documents\GitHub\CSharp-StudentScoreAnalyzer\obj\Debug\net9.0\ref\StudentScoreAnalyzer.dll
