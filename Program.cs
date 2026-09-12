@@ -186,7 +186,12 @@ do
     void FindSpecificScore()
     {
         Console.WriteLine("Enter score to find: ");
-        int find = int.Parse(Console.ReadLine());
+        int find;
+
+        while (!int.TryParse(Console.ReadLine(), out find))
+        {
+            Console.WriteLine("Invalid input. Please enter a valid number:");
+        }
 
         var isFound = scores.Any(n => n == find);
 
